@@ -1,0 +1,158 @@
+# Troubleshooting Guide
+
+## 🚨 Common Issues & Solutions
+
+### "Tool not found" error
+**Problem:** Claude says the contact search tool isn't available
+
+**Solutions:**
+1. Check Extensions menu - make sure it shows as connected
+2. Restart Claude completely (Cmd+Q, then reopen)
+3. Try the test again
+
+### No permission prompts appeared
+**Problem:** You didn't see the permission dialogs during installation
+
+**Solution:**
+1. Go to **System Settings > Privacy & Security**
+2. Click **"Contacts"** on the left
+3. Make sure **Claude** and **Terminal** are both enabled
+4. If they're not there, click the **+** button to add them
+5. Restart Claude
+
+### "Permission denied" or "Access not allowed" errors
+**Problem:** Claude doesn't have the right permissions
+
+**Solution:**
+1. Go to **System Settings > Privacy & Security > Full Disk Access**
+2. Find **Claude** in the list and make sure it's enabled
+3. If not there, click **+** and add Claude
+4. Go to **Privacy & Security > Contacts**
+5. Make sure both **Claude** and **Terminal** are enabled
+6. Restart Claude
+
+### Tool shows but doesn't work / returns empty results
+**Problem:** Extension is installed but searches return nothing
+
+**Solutions:**
+1. **Disable the native contact search** to prevent conflicts:
+   - Go to Claude settings → Extensions
+   - Find any native "Contact Search" or similar tools
+   - Turn them OFF or disable them
+   - This prevents Claude from trying the broken native tool first
+2. Make sure your Contacts app works normally (open it and verify your contacts are there)
+3. Try searching for a contact you know exists
+4. Check if search term is spelled correctly
+5. Try simpler searches like just first names
+
+### Found wrong contact or multiple matches
+**Problem:** Claude finds a contact but it's the wrong person (e.g., "John Smith" instead of "John F. Smith")
+
+**Solutions:**
+1. **Be more specific** in your search:
+   - Use full names: "John Francis Smith" instead of "John"
+   - Include middle names or nicknames if they're in your contacts
+   - Add distinguishing info: "John from work" if that's in the contact name
+2. **Check for duplicate contacts** in your Contacts app and merge them
+3. **Use unique parts of the name** that only one person has
+4. **Include phone number or email** in your request: "Text John at 555-1234"
+
+### Contacts with special characters or profanity
+**Problem:** Contact names with unusual characters don't work properly
+
+**Solution:**
+- The tool handles most special characters fine (tested with "Sean Fucking Nugent")
+- If having issues, try searching with just part of the name
+- Check that the contact name in Contacts app matches what you're searching for
+
+### Phone number format issues
+**Problem:** Phone numbers appear in different formats (+1, parentheses, etc.)
+
+**Note:**
+- This is normal - the tool returns numbers exactly as stored in Contacts app
+- iMessage will handle different formats automatically
+- If messaging fails, check the contact in Contacts app for the correct number
+
+### MCP server gets stuck or stops working
+**Problem:** Tool was working but suddenly stops responding
+
+**Solutions:**
+1. **Restart Claude completely** (Cmd+Q, then reopen)
+2. **Check Activity Monitor** for stuck "node" processes and quit them
+3. **Reinstall the extension** if restarting doesn't help
+
+### Extension appears disconnected in Claude
+**Problem:** Shows as "disconnected" or "error" in extensions menu
+
+**Solutions:**
+1. Remove the extension completely
+2. Restart Claude
+3. Install again (follow all permission prompts)
+4. If still failing, restart your Mac and try again
+
+## 🔧 Step-by-Step Permission Fix
+
+If you're having permission issues, follow these exact steps:
+
+1. **Quit Claude completely** (Cmd+Q)
+2. **Open System Settings**
+3. **Go to Privacy & Security**
+4. **Click "Full Disk Access"** on the left
+5. **Click the lock icon** and enter your password
+6. **Look for Claude** in the list
+7. **If Claude isn't there:**
+   - Click the **+** button
+   - Navigate to Applications
+   - Select Claude
+   - Click Open
+8. **Make sure Claude is checked/enabled**
+9. **Click "Contacts"** on the left
+10. **Make sure both Claude and Terminal are enabled**
+11. **If Terminal isn't there, add it** (same process as above)
+12. **Restart Claude**
+
+## 🧪 Testing Commands
+
+Use these to verify everything works:
+
+### Basic Test
+```
+"Search my contacts for anyone named John"
+```
+**Expected:** List of contacts with phone numbers
+
+### Advanced Test  
+```
+"Find Sarah's contact info and send her a message saying 'testing AI tools'"
+```
+**Expected:** Contact found, message sent confirmation
+
+### Stress Test
+```
+"Show me all contacts with the last name Smith"
+```
+**Expected:** Multiple results if you have multiple Smiths
+
+## 📞 Still Having Issues?
+
+### Before Asking for Help
+1. Try all solutions above first
+2. Restart Claude completely
+3. Restart your Mac
+4. Note the exact error message
+
+### Information to Include
+- macOS version
+- Exact error message
+- Which step failed
+- Whether Contacts app works normally
+
+### Last Resort
+1. Remove the extension completely
+2. Restart your Mac
+3. Install extension again
+4. Follow ALL permission prompts carefully
+
+---
+
+**Most issues are permission-related and can be fixed by carefully following the permission steps above.**

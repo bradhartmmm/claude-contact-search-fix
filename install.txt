@@ -1,0 +1,30 @@
+CLAUDE CONTACT SEARCH FIX - QUICK INSTALL
+=========================================
+
+WHAT THIS DOES:
+Fixes Claude's broken contact search so you can actually use the messaging features.
+
+INSTALL STEPS:
+1. Open Claude Desktop app
+2. Click settings (⚙️) → Extensions → Install from file
+3. Select the .dxt file from this package
+4. Click "Allow" on ALL permission prompts
+5. Restart Claude completely (Cmd+Q, then reopen)
+
+TEST IT WORKS:
+Type: "Search for contacts named John"
+You should see contacts with phone numbers.
+
+HAVING ISSUES?
+Read README.md for detailed instructions
+Read TROUBLESHOOTING.md for common problems
+
+PERMISSIONS NEEDED:
+- Contacts access (for Claude and Terminal)
+- Full Disk Access (for Claude)
+
+Go to System Settings > Privacy & Security if you need to fix permissions.
+
+====================
+Built by Brad Hart
+Contact: brad@makemoremarbles.com

@@ -1,0 +1,34 @@
+{
+  "dxt_version": "0.1",
+  "version": "0.1.0",
+  "name": "Search Contacts Fast",
+  "description": "Search your Mac contacts using AppleScript via shell script.",
+  "author": {
+    "name": "Brad Hart",
+    "email": "brad@makemoremarbles.com"
+  },
+  "server": {
+    "type": "node",
+    "entry_point": "index.js",
+    "mcp_config": {
+      "command": "node",
+      "args": ["${__dirname}/index.js"]
+    }
+  },
+  "tools": [
+    {
+      "name": "search_contacts_fast",
+      "description": "Search local contacts using AppleScript",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "query": {
+            "type": "string",
+            "description": "The name or partial name of the contact"
+          }
+        },
+        "required": ["query"]
+      }
+    }
+  ]
+}

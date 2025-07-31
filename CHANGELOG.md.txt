@@ -1,0 +1,89 @@
+# Changelog
+
+All notable changes to the Claude Contact Search Fix.
+
+## [v10] - 2025-07-30
+
+### Added
+- Complete documentation package
+- Foolproof installation guide
+- Comprehensive troubleshooting guide
+- Quick reference install file
+
+### Fixed
+- Tool naming consistency issues
+- Registration problems across conversations
+- Error handling and user feedback
+
+## [v9] - 2025-07-30
+
+### Fixed
+- Tool naming convention standardized to prevent "Tool not found" errors
+- Updated to use consistent `Search Contacts Fast:search_contacts_fast` naming
+- Eliminated naming ambiguity issues
+
+## [v8] - 2025-07-30
+
+### Added
+- Improved error handling with actual error messages
+- Support for multiple naming conventions using `.endsWith()` matching
+
+### Fixed
+- Tool registration inconsistencies
+- Better debugging information in error responses
+
+## [v7] - 2025-07-30
+
+### Added
+- Complete node_modules integration for self-contained deployment
+- Working MCP server with proper initialization handlers
+
+### Fixed
+- Missing dependencies that caused server crashes
+- Initialization timeout issues
+- AppleScript execution permissions
+
+## [v6] - 2025-07-30
+
+### Added
+- Updated AppleScript with better error handling
+- Improved contact field parsing
+
+### Fixed
+- AppleScript permission issues
+- Contact data formatting problems
+
+## [v5] - 2025-07-30
+
+### Added
+- Initial working MCP server implementation
+- AppleScript-based contact search backend
+- Basic tool registration and execution
+
+### Fixed
+- MCP server connection and timeout issues
+- Tool handler registration problems
+
+## [v1-v4] - 2025-07-30
+
+### Development Phases
+- Initial MCP server setup and debugging
+- AppleScript development and testing
+- Permission and access configuration
+- Tool naming and registration experimentation
+
+---
+
+## Background
+
+This project started when Claude's native contact search began consistently timing out for users with normal-sized contact databases (1000+ contacts). The timeout issue made Claude's iMessage integration essentially unusable.
+
+The solution bypasses the broken native search with a fast AppleScript implementation that integrates seamlessly with Claude's existing messaging tools.
+
+## Technical Details
+
+- **Backend:** AppleScript for direct Contacts.app integration
+- **Framework:** Model Context Protocol (MCP) server
+- **Platform:** macOS with Contacts.app
+- **Performance:** <2 second search across 5,000+ contacts
+- **Integration:** Works with existing Claude iMessage tools
