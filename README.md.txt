@@ -64,10 +64,11 @@ NOTE this can take a while if you have a lot of contacts like I do! 5000+
 
 Just give it a minute, as long as it doesn't time out, you're golden. 
 
-### The Full Workflow Test
+### The Full Workflow Test (requires downloading Anthropics native desktop iMessage app, and to avoid issues, turn off their native contacts search which never worked on any of my machines) 
 ```
 "Search for [friend's name] and send them a message saying 'testing new AI tools!'"
-```
+
+This will use the search_contacts_fast function I built to find the contact number and the native iMessage app to actually send the message to the person! All without ever opening iMessage, via chat or voice prompt. Pretty cool! 
 
 If it finds the contact AND sends the message, you have the full superpowers unlocked! 🚀
 
